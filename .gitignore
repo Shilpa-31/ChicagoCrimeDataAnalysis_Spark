@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables
+.env
+
+# Data outputs
+*.csv
+# *.geojson
+
+# Logs
+nohup.out
+
+# OS / editors
+.DS_Store
+.vscode/
+.idea/

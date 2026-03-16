@@ -1,0 +1,11 @@
+pyspark
+psycopg2 # PostgreSQL driver
+boto3
+requests
+
+streamlit
+pandas
+plotly
+folium
+sqlalchemy
+streamlit-folium
