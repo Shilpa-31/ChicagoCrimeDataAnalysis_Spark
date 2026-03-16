@@ -1,7 +1,7 @@
 # Chicago Crime Data Analysis with Apache Spark
 
 ## Overview
-This project implements a **data engineering pipeline using Apache Spark** to ingest, process, and analyze Chicago crime data obtained from the **Chicago Open Data API**.
+This project implements a **data engineering pipeline using Apache Spark** to ingest, process, and analyze Chicago crime data obtained from the **Chicago Open Data API** (https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2/about_data).
 
 The pipeline performs the following operations:
 - Data ingestion from a public API: https://data.cityofchicago.org/resource/ijzp-q8t2.json
@@ -30,30 +30,30 @@ The system demonstrates a **scalable Spark-based data processing workflow** inte
 ---
 
 # Project Structure
-
-CHICAGOCRIMEDATAANALYSIS_SPARK
-│
-├── config
-│   └── aws_config.py
-│
-├── jars
-│   └── postgresql-42.7.5.jar  // Compatible version
-│
-├── spark_jobs
-│   ├── crime_analysis.py
-│   ├── load_processed_data_to_postgres.py
-│   ├── load_raw_to_postgres.py
-│   ├── read_from_s3.py
-│   └── transform_data.py
-│
-├── utils
-│   └── api_to_s3Bucket.py
-│
-├── dashboard.py
-├── main.py
-├── requirements.txt
-└── README.md
-
+```
+  CHICAGOCRIMEDATAANALYSIS_SPARK
+  │
+  ├── config
+  │   └── aws_config.py
+  │
+  ├── jars
+  │   └── postgresql-42.7.5.jar  // Compatible version
+  │
+  ├── spark_jobs
+  │   ├── crime_analysis.py
+  │   ├── load_processed_data_to_postgres.py
+  │   ├── load_raw_to_postgres.py
+  │   ├── read_from_s3.py
+  │   └── transform_data.py
+  │
+  ├── utils
+  │   └── api_to_s3Bucket.py
+  │
+  ├── dashboard.py
+  ├── main.py
+  ├── requirements.txt
+  └── README.md
+```
 ---
 
 # System Architecture
@@ -107,7 +107,7 @@ The pipeline consists of several modular Spark jobs responsible for different st
 
 ## 1. Data Ingestion
 Crime records are fetched from the **Chicago Open Data API** and stored as raw data in an **AWS S3 bucket**.
-- `utils/api_to_s3Bucket.py`
+`utils/api_to_s3Bucket.py`
 
 - Fetch crime data using API requests
 - Handle pagination for large datasets
@@ -118,7 +118,7 @@ Crime records are fetched from the **Chicago Open Data API** and stored as raw d
 
 ## 2. Data Retrieval from S3
 Raw crime data is retrieved from the S3 bucket using **Spark**.
-- `spark_jobs/read_from_s3.py`
+`spark_jobs/read_from_s3.py`
 
 Spark loads the dataset into a distributed DataFrame for processing.
 
@@ -126,7 +126,7 @@ Spark loads the dataset into a distributed DataFrame for processing.
 
 ## 3. Data Transformation and Cleaning
 Data preprocessing is performed using **Spark DataFrame transformations**.
-- `spark_jobs/transform_data.py`
+`spark_jobs/transform_data.py`
 
 Processing tasks include:
 - Handling missing values
@@ -191,9 +191,9 @@ The pipeline execution is orchestrated through `main.py`
 ---
 
 # Installation
-Clone the repository: https://github.com/Shilpa-31/ChicagoCrimeDataAnalysis_Spark
-Navigate to the project directory: cd ChicagoCrimeDataAnalysis_Spark
-Install dependencies: pip install -r `requirements.txt`
+- Clone the repository: https://github.com/Shilpa-31/ChicagoCrimeDataAnalysis_Spark
+- Navigate to the project directory: cd ChicagoCrimeDataAnalysis_Spark
+- Install dependencies: pip install -r `requirements.txt`
 
 ---
 
