@@ -204,8 +204,3 @@ Potential enhancements include:
 - Implement **partitioned data storage in S3**
 - Add **geospatial crime hotspot analysis**
 - Deploy the pipeline on a **Spark cluster (EMR / Databricks)**
-
----
-
-# License
-This project is intended for educational and analytical purposes using publicly available Chicago crime data.
